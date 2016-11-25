@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gentellela Alela! | </title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Dropzone.js -->
+    <link href="../vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <style>
+        .sap_line_active {
+            background: #282b34;
+            width: 96px;
+            height: 5px;
+            position: absolute;
+            right: 0px;
+            top: 75px;
+            z-index: 112;
+        }
+
+        .sap_line_normal {
+            background: #cdcdcd;
+            width: 96px;
+            height: 5px;
+            position: absolute;
+            right: 0px;
+            top: 75px;
+            z-index: 112;
+        }
+
+        .rcorners2 {
+            border-radius: 100px;
+            /* background: #73AD21; */
+            /* padding: 20px; */
+            width: 150px;
+            height: 150px;
+            border: 5px solid #282b34;
+            margin-left: -10px;
+            z-index: 200;
+        }
+
+        .rcorners1 {
+            border-radius: 100px;
+            /* background: #73AD21; */
+            /* padding: 20px; */
+            width: 140px;
+            height: 140px;
+            border: 5px solid white;
+            z-index: 200;
+        }
+
+        .activecorner {
+            text-align: center;
+            font-weight: bold;
+            color: #4b4b4b;
+            margin: 15px 0px 0px 0px;
+            font-size: 18px;
+        }
+
+        .normalcorner {
+            text-align: center;
+            font-weight: bold;
+            color: #cdcdcd;
+            margin: 15px 0px 0px 10px;
+            font-size: 18px;
+        }
+    </style>
+    <script type="text/javascript">
+        function toggleMenu(obj) {
+            if ($(obj).attr('src') == "estiapp_assets/menu_open.png") {
+                $('#p1').css('width', '160px');
+                $('#p2').css('width', '157px');
+                $('#imgHam').attr('src', "estiapp_assets/menu_close.png");
+
+            }
+            else {
+                $('#p1').css('width', '118px');
+                $('#p2').css('width', '117px');
+                $('#imgHam').attr('src', "estiapp_assets/menu_open.png");
+            }
+        }
+    </script>
+</head>
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col" style="color:#282b34;">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Estiapp</span></a>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <!-- menu profile quick info -->
+                    <!-- /menu profile quick info -->
+                    <br />
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+
+                            <ul class="nav side-menu">
+
+                                <li>
+                                    <a><img src="estiapp_assets/createestimate_sidebar.png" style="margin-top:-10px;" /> ESTIMATE </a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="general_elements.html">Create Estimate</a></li>
+                                        <li><a href="media_gallery.html">My Estimate</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><img src="estiapp_assets/clients_sidebar.png" style="margin-top:-10px;" /> CLIENTS </a>
+
+                                </li>
+                                <li>
+                                    <a><img src="estiapp_assets/reports_sidebar.png" style="margin-top:-10px;" /> REPORTS </a>
+
+                                </li>
+                                <li>
+                                    <a><img src="estiapp_assets/setting_sidebar.png" style="margin-top:-10px;" />SETTINGS </a>
+
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /sidebar menu -->
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="Settings">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Lock">
+                            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Logout">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><img id="imgHam" onclick="toggleMenu(this);" src="estiapp_assets/menu_open.png" /></a>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="images/img.jpg" style="height:40px; width:40px;" alt="">
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li><a href="javascript:;"> Profile</a></li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <span class="badge bg-red pull-right">50%</span>
+                                            <span>Settings</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="javascript:;">Help</a></li>
+                                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                                </ul>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Type to search.." style="border-radius: 10px;
+    margin-top: 13px; color: #bbbbbb;font-style: italic; font-size:14px; height:40px;">
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="">
+                    <div class="clearfix"></div>
+                    <div style="text-align: center; font-size: 24px; color:#4b4b4b;">
+                        Get started with Estiapp with in 5 minutes
+                    </div>
+                    <div class="col-lg-2"></div>
+
+                    <div class="col-lg-9" style="margin-top:30px;">
+                        <div class="col-lg-4">
+                            <div class="rcorners2">
+                                <img src="estiapp_assets/add_new_client.png" class="rcorners1" style="background-color:#282b34;" />
+                            </div><p id="p1" class="sap_line_active"></p><br />
+                            <span class="activecorner">Add New Client</span>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="rcorners2">
+                                <img src="estiapp_assets/create_estiate_active.png" class="rcorners1" />
+                            </div><p id="p2" class="sap_line_normal"></p><br />
+                            <span class="activecorner" style="color:#282b34">Create Estimate</span>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="rcorners2" style="border-color:#cdcdcd;">
+                                <img src="estiapp_assets/send_invite_completed.png" class="rcorners1" />
+                            </div><br />
+                            <span class="normalcorner">Invite People</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="estiapp_assets/create_floatingbutton.png" style="position:absolute; right:64px; bottom:64px;" />
+        </div>
+        <!-- /page content -->
+        <!-- footer content -->
+        <!-- /footer content -->
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- Dropzone.js -->
+    <script src="../vendors/dropzone/dist/min/dropzone.min.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+</body>
+</html>
